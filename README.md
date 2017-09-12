@@ -1,6 +1,6 @@
-# Todo-List
+# Todo-List JWT Auth
 
-A REST API built with Node, Express and Mongo db.
+A REST API built with Node, Express and Mongo-db with JWT Authentication.
 
 ## Getting Started
 
@@ -17,6 +17,8 @@ These instruction will guide you to get a copy of the project and running on you
 * [express](http://expressjs.com/) - a web application framework for node.js
 * [mongoose](http://mongoosejs.com/) -  a MongoDB ODM (the NoSQL equivalent of an ORM) for Node
 * body-parser - parse incoming request bodies in a middleware before your handlers
+* bcryptjs - password hashing and encoding
+* jsonwebtoken - JWT tokens for Authentication
 
 ### dev-depencencies
 
@@ -24,10 +26,10 @@ These instruction will guide you to get a copy of the project and running on you
 
 ### Installing
 
-* Clone the repository
+* Clone the authentication branch
 
 ```sh
-git clone https://github.com/NibeshSdev/todolist.git
+git clone -b authentication --single-branch https://github.com/NibeshSdev/todolist.git
 ```
 
 * Install all dependencies
@@ -52,19 +54,12 @@ Otherwise go to mongo installation directory > bin > mongod.exe
 npm run start
 ```
 
-Then use the following URLs for fetching, inserting, updating and deleting data.
 
-### URLs available
+### Using POSTMAN to testing
 
-* list_all_tasks - **GET** [http://localhost:3000/tasks](http://localhost:3000/tasks)
+Authentication is only in  **POST** [http://localhost:3000/tasks](http://localhost:3000/tasks)
 
-* create_a_task - **POST** [http://localhost:3000/tasks](http://localhost:3000/tasks)
-
-* read_a_task - **GET** [http://localhost:3000/tasks](http://localhost:3000/tasks/{taskId})
-
-* update_a_task - **PUT** [http://localhost:3000/tasks](http://localhost:3000/tasks/{taskId})
-
-* delete_a_task - **DELETE** [http://localhost:3000/tasks](http://localhost:3000/tasks/{taskId})
+*
 
 ## Authors
 
